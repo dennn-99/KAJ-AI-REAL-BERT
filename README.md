@@ -25,7 +25,7 @@ uvicorn backend.app.main:app --reload
 Buka dashboard:
 
 ```text
-http://127.0.0.1:8000
+(https://kaj-ai-real.vercel.app/)
 ```
 
 ## BERT Model
