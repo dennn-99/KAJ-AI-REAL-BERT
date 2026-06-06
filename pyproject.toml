@@ -1,2 +1,18 @@
+[project]
+name = "kaj-ai-bert"
+version = "1.0.0"
+description = "AI analisis artikel, media sosial, gambar, audio, dan video untuk deteksi AI/asli serta valid/hoaks."
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "python-multipart",
+    "requests",
+    "beautifulsoup4",
+    "scikit-learn",
+    "joblib",
+    "pydantic",
+    "transformers",
+]
+
 [tool.vercel]
 entrypoint = "backend.app.main:app"
