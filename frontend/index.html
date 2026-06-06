@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KAJ AI</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">K</span>
+        <div>
+          <strong>KAJ AI</strong>
+          <small>BERT Media Verification</small>
+        </div>
+      </div>
+      <nav>
+        <button class="nav-button active" data-view="analysis">Analisis</button>
+        <button class="nav-button" data-view="training">Pelatihan</button>
+        <button class="nav-button" data-view="viral">Uji Viral</button>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="topbar">
+        <div>
+          <h1>KAJ AI</h1>
+          <p>Analisis validitas, indikasi AI, sentimen, dan entitas untuk konten lintas media.</p>
+        </div>
+        <select id="language">
+          <option value="auto">Auto Detect</option>
+          <option value="id">Bahasa Indonesia</option>
+          <option value="en">English</option>
+          <option value="ms">Bahasa Melayu</option>
+          <option value="jv">Basa Jawa</option>
+          <option value="su">Basa Sunda</option>
+          <option value="ar">Arab</option>
+        </select>
+      </section>
+
+      <section id="analysis" class="view active">
+        <div class="panel">
+          <div class="tabs">
+            <button class="tab active" data-mode="text">Teks</button>
+            <button class="tab" data-mode="url">URL</button>
+            <button class="tab" data-mode="media">Media</button>
+          </div>
+
+          <form id="analysis-form">
+            <textarea id="text-input" rows="10" placeholder="Tempel artikel berita, caption, transkrip audio, atau postingan media sosial..."></textarea>
+            <input id="url-input" class="hidden" type="url" placeholder="https://contoh.com/artikel" />
+            <div id="media-inputs" class="hidden media-inputs">
+              <input id="file-input" type="file" accept="image/*,audio/*,video/*" />
+              <textarea id="caption-input" rows="5" placeholder="Tambahkan caption, transkrip, atau konteks media..."></textarea>
+            </div>
+            <button class="primary" type="submit">Analisis Konten</button>
+          </form>
+        </div>
+
+        <div id="result" class="result empty">
+          <h2>Hasil Analisis</h2>
+          <p>Hasil klasifikasi akan muncul di sini.</p>
+        </div>
+      </section>
+
+      <section id="training" class="view">
+        <div class="panel">
+          <h2>Database Pelatihan</h2>
+          <form id="training-form" class="training-grid">
+            <textarea id="train-text" rows="7" placeholder="Masukkan contoh konten berlabel untuk memperkuat database KAJ AI..."></textarea>
+            <select id="train-validity">
+              <option value="valid">Valid</option>
+              <option value="perlu_verifikasi">Perlu Verifikasi</option>
+              <option value="hoaks">Hoaks</option>
+            </select>
+            <select id="train-origin">
+              <option value="asli">Asli</option>
+              <option value="ai_generated">AI Generated</option>
+              <option value="campuran">Campuran</option>
+              <option value="tidak_pasti">Tidak Pasti</option>
+            </select>
+            <input id="train-source" placeholder="Sumber / catatan data" />
+            <button class="primary" type="submit">Simpan Sampel</button>
+            <button id="train-model" type="button">Latih Model Lokal</button>
+          </form>
+        </div>
+        <div class="panel">
+          <h2>Sampel Tersimpan</h2>
+          <div id="samples" class="sample-list"></div>
+        </div>
+      </section>
+
+      <section id="viral" class="view">
+        <div class="panel">
+          <h2>Pengujian Viral dan Terkini</h2>
+          <p class="muted">Contoh klaim ini diambil dari sumber cek fakta terbaru yang diverifikasi saat proyek dibuat.</p>
+          <div id="viral-tests" class="viral-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

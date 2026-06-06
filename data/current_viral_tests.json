@@ -1,0 +1,23 @@
+[
+  {
+    "claim": "Hantavirus 2026 sudah diprediksi oleh akun X sejak 2022.",
+    "expected_label": "hoaks",
+    "source": "Global Fact-Check Database / TurnBackHoax",
+    "published": "2026-06-03",
+    "url": "https://gfd.turnbackhoax.id/focus/34986"
+  },
+  {
+    "claim": "Listrik dan ATM di Indonesia akan mati selama tujuh hari.",
+    "expected_label": "hoaks",
+    "source": "Kementerian Komunikasi dan Digital",
+    "published": "2026-01-22",
+    "url": "https://www.komdigi.go.id/berita/berita-hoaks/detail/hoaks-listrik-dan-atm-bakal-mati-selama-7-hari"
+  },
+  {
+    "claim": "BMKG memprediksi gempa megathrust akan terjadi pada 2026.",
+    "expected_label": "hoaks",
+    "source": "Global Fact-Check Database / TurnBackHoax",
+    "published": "2026-03-01",
+    "url": "https://gfd.turnbackhoax.id/focus/32567"
+  }
+]
